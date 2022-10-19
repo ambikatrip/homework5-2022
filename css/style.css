@@ -1,3 +1,4 @@
+/* 1 - animation */
 #logo{
     width: 475px;
     animation: logo_move 5s;
@@ -7,27 +8,27 @@
     100% {width: 475px; opacity: 1;}
 }
 
-/* 2 */
+/* 2 - font, bg */
 body {
     font-family: 'Poppins', 'serif';
     background-image: url('../images/concrete_seamless.png');
     background-color: #f1f1f1;
 }
 
-/* 3 */
+/* 3 - header */
 header{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
 }
-
+ /* 5 - visited links */
 .nav_item a:visited{
     color: blue;
     text-decoration: underline;
 }
 
-/* 6 */
+/* 6 - card styling*/
 .card > header {
     background-color: #288088;
     border: 2px solid #45ADAD;
@@ -36,11 +37,13 @@ header{
     border-radius: 50px;
 }
 
+/* 7 - card sizing/position using flex*/
 .card{
     border-radius: 50px;
     flex-basis: 450px;
 }
 
+/* 8 - pricing cards positioning using flex*/
 .pricing{
     display: flex;
     flex-direction: row;
@@ -49,12 +52,14 @@ header{
     align-items: center;
 }
 
+/* 9 - gallery styling*/
 .gallery img{
     border: 10px solid #50C7C7;
     margin: 10px;
     width: 300px
 }
 
+/* 10 - gallery positioning using flex*/
 .gallery{
     display: flex;
     flex-direction: row;
@@ -63,6 +68,7 @@ header{
 }
 
 @media (min-width: 900px) {
+    /* 11 - header positioning using flex*/
     header{
         display: flex;
         flex-wrap: nowrap;
@@ -75,18 +81,21 @@ header{
         flex-wrap: nowrap;
         flex-direction: row;
     }
+    /* 12*/
     .pricing{
         flex-basis: 275px;
     }
     .card{
         flex-basis: 275px;
     }
+    /* 13 - sticky header */
     body > header{
         position: sticky;
         top: 0;
     }
 }
 
+/* 14 - reduced animation*/
 @media (prefers-reduced-motion) {
     #logo {
         animation: none;
@@ -94,11 +103,13 @@ header{
 }
 
 @media print{
-
+    /* 15 and 16 - changing font and bg for print*/
     body {
         font-family: 'Arial', 'Helvetica';
         background-image: none;
     }
+
+    /* 17*/
     nav{
         width: 100%;
     }
@@ -108,6 +119,7 @@ header{
         justify-content: space-around;
     }
 
+    /* 18 - positioning for print using flex*/
     .pricing{
         display: flex;
         flex-direction: row;
@@ -115,15 +127,18 @@ header{
         align-items: flex-end;
     }
 
+    /* 19 - card styling for print*/
     .card{
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
 
+    /* 20 - hiding gallery for print*/
     .gallery{
         display: none;
     }
-
+    
+    /* 21 - thumbs up*/
     .card li:nth-child(2)::after{
         content: '\1F44D';
         
